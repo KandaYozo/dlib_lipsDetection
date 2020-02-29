@@ -13,6 +13,7 @@ resized = resizeImage(img)
 cv2.imshow("initial image", resized)
 cv2.waitKey(0)
 
-frame = lipDetection(resized, detector, predictor)
+frame, mouth_roi = lipDetection(resized, detector, predictor)
+print(mouth_roi)
 cv2.imshow("frame image", frame)
 cv2.waitKey(0)
