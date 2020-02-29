@@ -3,6 +3,10 @@ import numpy as np
 from FR import *
 from lip_detection import *
 
+#----------------------------------------------------------------------------
+# function used to extract lips points
+# input: frame Name + extension
+# output: frame, mouth_roi points pair vector
 def extractLips(filename):
     img = readFrame(filename)
 
