@@ -1,19 +1,10 @@
-import cv2
-import numpy as np
-from FR import *
-from lip_detection import *
+from extract_lips import *
 
 
 
-img = readFrame()
-
-detector,predictor = initlizeDlib()
-
-resized = resizeImage(img)
-cv2.imshow("initial image", resized)
-cv2.waitKey(0)
-
-frame, mouth_roi = lipDetection(resized, detector, predictor)
+filename = "close.png"
+frame, mouth_roi = extractLips(filename)
 print(mouth_roi)
 cv2.imshow("frame image", frame)
 cv2.waitKey(0)
+

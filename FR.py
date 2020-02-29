@@ -5,8 +5,8 @@ import dlib
 # function used to read a frame from file
 # input: none
 # output: image
-def readFrame():
-    img = cv2.imread('DataSet-Trial/close.png')
+def readFrame(filesname):
+    img = cv2.imread('DataSet-Trial/'+filesname)
     return img
 #----------------------------------------------------------------------------
 # function used to resize image
