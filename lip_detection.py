@@ -6,7 +6,6 @@ import dlib
 def lipDetection(frame,detector,predictor):
     gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
     faces = detector(gray)
-    print(faces)
     if len(faces) == 0:
         return 0, 0
     else:
